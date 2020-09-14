@@ -7,8 +7,15 @@ from chatterbot import ChatBot
 
 bot = ChatBot('BotName')
 
-bot = ChatBot(
-    'BotName',
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri='sqlite:///database.sqlite3'
-)
+#  storage adapter
+bot = ChatBot('BotName',
+               storage_adapter='chatterbot.storage.SQLStorageAdapter',
+               database_uri='sqlite:///database.sqlite3'
+              )
+
+#  logic adapter
+bot = ChatBot('BotName',  
+              logic_adapters=[
+              'chatterbot.logic.BestMatch',
+              'chatterbot.logic.TimeLogicAdapter'],
+              )

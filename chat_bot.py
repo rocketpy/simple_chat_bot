@@ -37,3 +37,8 @@ trainer.train([
 'Okay Thanks',
 'No Problem! Have a Good Day!'
 ])
+
+#  testing
+response = bot.get_response('I have a ...')
+
+print("Bot response:", response)
